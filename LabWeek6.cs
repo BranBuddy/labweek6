@@ -6,7 +6,7 @@ public class LabWeek6 : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public int sizeOfForest = 15;
+    public int sizeOfForest = Random.Range(5, 15);
     public int stonesrequired;
     public GameObject[] tress;
     public GameObject[] stones;
@@ -15,6 +15,9 @@ public class LabWeek6 : MonoBehaviour
     public int max = 0;
     public float scaleMin = 0.1f;
     public float scaleMax = 1.0f;
+
+
+
     // Creates plane
     void CreatePlan()
     {
@@ -29,8 +32,8 @@ public class LabWeek6 : MonoBehaviour
 
     void CreateForest()
     {
-        //for (int i = 0; i == sizeOfForest; i++)
-        
+        for (int i = 0; i < sizeOfForest; i++)
+        {
              GameObject cylinder = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
 
                     Renderer renderer = cylinder.GetComponent<Renderer>();
@@ -40,8 +43,8 @@ public class LabWeek6 : MonoBehaviour
                     cylinder.transform.localScale = new Vector3(Random.Range(scaleMin, scaleMax), Random.Range(scaleMin, scaleMax), Random.Range(scaleMin, scaleMax));
                     cylinder.transform.position = new Vector3(Random.Range(min, max), Random.Range(0, max), Random.Range(min, max));
 
-           // Debug.Log("Object Created" + i);
-        
+           Debug.Log("Object Created" + i);
+        }
 
        
         
