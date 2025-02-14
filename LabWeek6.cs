@@ -10,6 +10,8 @@ COMMENT KEY
 
 */
 
+
+// Made by Istvan W. and Brandon W.
 public class LabWeek6 : MonoBehaviour
 {
     // Start is called before the first frame update
